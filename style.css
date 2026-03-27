@@ -1,0 +1,108 @@
+/* Injectrix Portfolio - Cyber Space Theme */
+
+:root {
+    --bg-dark: #06060e;           /* Near black */
+    --nebula-deep: #1e1b4b;       /* Deep Indigo */
+    --accent-cyan: #22d3ee;       /* Light Blue / Cyan Glow */
+    --accent-purple: #a855f7;     /* Vibrant Purple */
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --glass: rgba(15, 23, 42, 0.7);
+}
+
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    /* Gradient creating a space nebula look */
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(34, 211, 238, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(168, 85, 247, 0.05) 0%, transparent 40%);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Glitch Typography for Titles */
+.pixel-text {
+    font-family: 'VT323', monospace;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, var(--accent-cyan), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.3));
+}
+
+/* Header Logo Styling */
+#logo-click {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    padding: 10px 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+#logo-click:hover {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Hero Section Glow */
+.hero-btn {
+    background: linear-gradient(45deg, var(--border-purple), #6366f1);
+    border: none;
+    color: white;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+}
+
+.hero-btn:hover {
+    background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.5);
+}
+
+/* Navigation Links */
+.nav-link:hover {
+    color: var(--accent-cyan);
+    text-shadow: 0 0 8px var(--accent-cyan);
+}
+
+/* Cards & Sections */
+.animate-on-scroll {
+    background: rgba(30, 41, 59, 0.3);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.animate-on-scroll:hover {
+    border-color: var(--accent-purple);
+    background: rgba(30, 41, 59, 0.5);
+}
+
+/* Custom Scrollbar (Cyan/Purple Gradient) */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--accent-cyan), var(--accent-purple));
+    border-radius: 10px;
+}
+
+/* Particles from JS will use these colors */
+.cursor-trail {
+    background: var(--accent-cyan) !important;
+    box-shadow: 0 0 10px var(--accent-cyan) !important;
+}
