@@ -56,7 +56,8 @@ function initializeTypingEffect() {
     const welcomeElement = document.getElementById('welcome-text');
     if (!helloElement || !welcomeElement) return;
 
-    const helloText = "> NEBULA_PROTOCOL_INITIALIZED... ";
+    // Add a space at the end of helloText
+    const helloText = "NEBULA_PROTOCOL_INITIALIZED... ";
     const welcomeText = "Welcome to Injectrix Terminal";
     
     let hIdx = 0, wIdx = 0;
@@ -64,9 +65,10 @@ function initializeTypingEffect() {
     function typeHello() {
         if (hIdx < helloText.length) {
             helloElement.textContent += helloText.charAt(hIdx++);
-            setTimeout(typeHello, 70);
+            setTimeout(typeHello, 80);
         } else {
-            setTimeout(typeWelcome, 400);
+            // Increase this delay from 300 to 1000 so the name stays clear
+            setTimeout(typeWelcome, 1000); 
         }
     }
 
@@ -76,7 +78,7 @@ function initializeTypingEffect() {
             setTimeout(typeWelcome, 50);
         }
     }
-    setTimeout(typeHello, 800);
+    setTimeout(typeHello, 500);
 }
 
 // 4. Space Particle Burst (On Button Hover)
